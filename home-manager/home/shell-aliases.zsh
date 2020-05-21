@@ -8,6 +8,7 @@ alias ll='ls -lh'
 
 # misc
 alias vimf="vim \$(fzf)"
+alias ww="fd | entr -c"
 
 # git
 alias gd='git diff'
