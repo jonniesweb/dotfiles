@@ -9,12 +9,30 @@ let
     mkdir -p $out/bin $out/share
     ${pkgs.coreutils}/bin/dircolors -b ${LS_COLORS}/LS_COLORS > $out/share/DIR_COLORS
   '';
+  localPackages = [ ls-colors ];
+  packages = with pkgs; [
+    # system
+    entr
+    fd
+    htop
+    pstree
+    ripgrep
+    tree
+
+    # code
+    git
+    git-revise
+    gitAndTools.hub
+    jq
+    nixpkgs-fmt
+    terraform
+  ];
 in
 {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  home.packages = [ ls-colors pkgs.nixpkgs-fmt ];
+  home.packages = localPackages ++ packages;
   home.file.".iterm2_shell_integration.zsh".source = ./home/.iterm2_shell_integration.zsh;
   xdg.enable = true;
 
