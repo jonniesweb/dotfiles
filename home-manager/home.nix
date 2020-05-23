@@ -14,7 +14,6 @@ let
     # system
     entr
     fd
-    htop
     pstree
     ripgrep
     tree
@@ -40,6 +39,13 @@ in
   programs.bat.enable = true;
   programs.fzf.enable = true;
   programs.fzf.enableZshIntegration = true;
+  programs.htop = {
+    enable = true;
+    meters.left = [ "AllCPUs2" "Memory" "Swap" ];
+    meters.right = [ "Tasks" "LoadAverage" "Uptime" ];
+    highlightBaseName = true;
+    headerMargin = false;
+  };
   programs.zsh = {
     enable = true;
     enableCompletion = true;
