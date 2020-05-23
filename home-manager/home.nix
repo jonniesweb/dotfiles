@@ -31,6 +31,7 @@ in
 {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+  programs.home-manager.path = "~/src/github.com/jonniesweb/dotfiles/home-manager/home.nix";
 
   home.packages = localPackages ++ packages;
   home.file.".iterm2_shell_integration.zsh".source = ./home/.iterm2_shell_integration.zsh;
@@ -53,8 +54,6 @@ in
     '';
 
     sessionVariables = rec {
-      HOME_MANAGER_CONFIG = ~/src/github.com/jonniesweb/dotfiles/home-manager/home.nix;
-
       NVIM_TUI_ENABLE_TRUE_COLOR = "1";
 
       ZSH_THEME = "agnoster";
