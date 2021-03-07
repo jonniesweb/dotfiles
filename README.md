@@ -12,3 +12,8 @@ Follow the regular home-manager installation: https://github.com/rycee/home-mana
 
 Then bootstrap home-manager via: `HOME_MANAGER_CONFIG=~/src/github.com/jonniesweb/dotfiles/home-manager/home.nix home-manager switch`
 
+## Troubleshooting
+
+### compinit insecure directories
+
+https://stackoverflow.com/a/63447799
