@@ -7,6 +7,8 @@ let
   };
   ls-colors = pkgs.runCommand "ls-colors" { } ''
     mkdir -p $out/bin $out/share
+    ln -s ${pkgs.coreutils}/bin/ls $out/bin/ls
+
     ${pkgs.coreutils}/bin/dircolors -b ${LS_COLORS}/LS_COLORS > $out/share/DIR_COLORS
   '';
   localPackages = [ ls-colors ];
