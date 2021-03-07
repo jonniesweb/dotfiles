@@ -77,6 +77,8 @@ in
 
       GOPATH = "$HOME";
       PATH = "$HOME/bin:$PATH";
+
+      DISABLE_SPRING = "1";
     };
 
     plugins = [

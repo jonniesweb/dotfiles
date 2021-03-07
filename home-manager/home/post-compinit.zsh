@@ -55,3 +55,6 @@ prompt_context(){}
 
 # dircolors
 eval $(cat ~/.nix-profile/share/DIR_COLORS)
+
+# Disable spring
+export DISABLE_SPRING=1
