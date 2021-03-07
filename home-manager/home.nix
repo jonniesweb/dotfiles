@@ -130,6 +130,7 @@ in
       vim-endwise
       vim-fugitive
       vim-gitgutter
+      # git-messenger-vim
       vim-multiple-cursors
       vim-nix
       vim-rhubarb
