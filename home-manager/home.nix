@@ -27,12 +27,15 @@ let
     jq
     nixpkgs-fmt
     terraform
+    docker
   ];
+  homeManagerConfigFile = "~/src/github.com/jonniesweb/dotfiles/home-manager/home.nix";
 in
 {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-  programs.home-manager.path = "~/src/github.com/jonniesweb/dotfiles/home-manager/home.nix";
+  programs.home-manager.path = homeManagerConfigFile;
+  home.file."~/.config/nixpkgs/home.nix".source = homeManagerConfigFile;
 
   home.packages = localPackages ++ packages;
   home.file.".iterm2_shell_integration.zsh".source = ./home/.iterm2_shell_integration.zsh;
