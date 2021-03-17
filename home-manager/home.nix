@@ -34,8 +34,8 @@ in
 {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-  programs.home-manager.path = homeManagerConfigFile;
-  home.file."~/.config/nixpkgs/home.nix".source = homeManagerConfigFile;
+  # programs.home-manager.path = homeManagerConfigFile;
+  # home.file."~/.config/nixpkgs/home.nix".source = homeManagerConfigFile;
 
   home.packages = localPackages ++ packages;
   home.file.".iterm2_shell_integration.zsh".source = ./home/.iterm2_shell_integration.zsh;
