@@ -39,6 +39,7 @@ in
 
   home.packages = localPackages ++ packages;
   home.file.".iterm2_shell_integration.zsh".source = ./home/.iterm2_shell_integration.zsh;
+  home.file."Library/Preferences/com.googlecode.iterm2.plist".source = ./home/com.googlecode.iterm2.plist;
   xdg.enable = true;
 
   programs.bat.enable = true;
