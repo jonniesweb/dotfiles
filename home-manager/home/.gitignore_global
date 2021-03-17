@@ -1,0 +1,18 @@
+.byebug_history
+tmp
+*.swp
+
+### Vim ###
+# swap
+.sw[a-p]
+.*.sw[a-p]
+# session
+Session.vim
+# temporary
+.netrwhist
+*~
+
+.DS_Store
+
+# vscode config
+.vscode
